@@ -17,7 +17,7 @@ class PdfController extends Controller
         ];
 
         // Generowanie PDF
-        $pdf = Pdf::loadView('karta_wypadku', $data);
+        $pdf = Pdf::loadView('protokół_powypadkowy', $data);
 
         // Możesz zapisać lokalnie, jeśli chcesz
         // Storage::put('public/generated.pdf', $pdf->output());
