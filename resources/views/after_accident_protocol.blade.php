@@ -7,7 +7,7 @@
     <style>
         /* CSS kompatybilny z DomPDF */
         body {
-            font-family: Arial, sans-serif;
+            font-family: "DejaVu Sans", sans-serif;
             font-size: 10px;
             line-height: 1.2;
             margin: 10px;
@@ -21,7 +21,6 @@
         }
 
         td, th {
-            border: 1px solid #000000;
             padding: 2px;
             vertical-align: top;
             text-align: left;
@@ -109,94 +108,175 @@
             page-break-before: always;
         }
 
-        .number-boxes {
+        .protocol-header {
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .protocol-header .divider {
+            font-size: 14px;
             display: inline-block;
+            line-height: 14px;
+            margin-left: 5px;
+            margin-right: 5px;
         }
 
         .number-box {
             display: inline-block;
-            width: 12px;
-            height: 15px;
-            border: 1px solid #000000;
-            margin-right: 1px;
+            width: 14px;
+            height: 18px;
+            line-height: 18px;
+            text-align: center;
+            font-size: 12px;
+            font-family: DejaVu Sans, sans-serif;
+            border: 1px solid #000;
+            background-color: #00ccff;
+            vertical-align: middle;
+            padding: 0;
+            margin: 0;
+        }
+
+        .number-box + .number-box {
+            margin-left: -1px;
+        }
+
+        .no-gap-boxes {
+            font-size: 0;
+            display: inline-block;
+        }
+
+        .no-gap-boxes > * {
+            font-size: 12px;
+        }
+
+        .field-container {
+            display: inline-block;
             text-align: center;
         }
 
-        .spacer {
-            height: 10px;
+        .field-label {
+            font-size: 10pt;
         }
     </style>
 </head>
 <body>
-<table>
+
+<div class="protocol-header">
+    <span class="no-gap-boxes">
+        <span style="margin-right: 5px">Protokół Nr</span>
+        <span class="number-box">&nbsp;</span>
+        <span class="number-box">&nbsp;</span>
+        <span class="number-box">&nbsp;</span>
+        <span class="divider">/</span>
+        <span class="number-box">2</span>
+        <span class="number-box">0</span>
+        <span class="number-box">2</span>
+        <span class="number-box">4</span>
+        <span style="margin-left: 5px">r.</span>
+    </span>
+    <div>
+        <strong>ustalenia okoliczności i przyczyn wypadku przy pracy</strong>
+    </div>
+</div>
+
+<table style="width: 100%; border-collapse: collapse; font-size: 10pt; font-family: DejaVu Sans, sans-serif; margin-top: 10px;">
     <tr>
-        <td colspan="4" class="protocol-header">
-            <strong>Protokół Nr</strong>
-            <span class="field-line" style="width: 80px;"></span>
-            <strong>/</strong>
-            <span class="number-box">2</span>
-            <span class="number-box">0</span>
-            <span class="number-box">2</span>
-            <span class="number-box">4</span>
-            <strong>r.</strong>
+        <td colspan="4" class="section-header">1. Dane pracodawcy:</td>
+    </tr>
+    <tr>
+        <td style="border-bottom: 1px dotted #000; padding-top: 12px; width: 70%;"></td>
+    </tr>
+    <tr style="font-size: 8pt;">
+        <td style="padding-left: 20px;">
+            <table style="width: 100%; border-collapse: collapse;">
+                <tr>
+                    <td style="width: 50%; text-align: left;">nazwa podmiotu obowiązanego
+                        adres lub imię i nazwisko pracodawcy
+                    </td>
+                </tr>
+            </table>
         </td>
     </tr>
     <tr>
-        <td colspan="4" class="protocol-header">
-            <strong>ustalenia okoliczności i przyczyn wypadku przy pracy</strong>
+        <td style="border-bottom: 1px dotted #000; padding-top: 12px; width: 70%;"></td>
+    </tr>
+    <tr style="font-size: 8pt;">
+        <td style="padding-left: 20px;">
+            <table style="width: 100%; border-collapse: collapse;">
+                <tr>
+                    <td style="width: 50%; text-align: left;">
+                        adres siedziby pracodawcy
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+<table style="width: 100%; border-collapse: collapse; font-size: 10pt; margin-top: 10px;">
+    <tr>
+        <td style="width: 50%; text-align: left;">
+            <div class="field-container">
+                <span class="no-gap-boxes">
+                    <span class="number-box"></span>
+                    <span class="number-box"></span>
+                    <span class="number-box"></span>
+                    <span class="number-box"></span>
+                    <span class="number-box"></span>
+                    <span class="number-box"></span>
+                    <span class="number-box"></span>
+                    <span class="number-box"></span>
+                    <span class="number-box"></span>
+                    <span class="number-box"></span>
+                </span>
+                <div class="field-label">
+                    NIP <sup>1)</sup>
+                </div>
+            </div>
+        </td>
+        <td colspan="2" style="width: 50%; text-align: right;">
+            <div class="field-container">
+                <span class="no-gap-boxes">
+                    <span class="number-box"></span>
+                    <span class="number-box"></span>
+                    <span class="number-box"></span>
+                    <span class="number-box"></span>
+                    <span class="number-box"></span>
+                    <span class="number-box"></span>
+                    <span class="number-box"></span>
+                    <span class="number-box"></span>
+                    <span class="number-box"></span>
+                    <span class="number-box"></span>
+                    <span class="number-box"></span>
+                </span>
+                <div class="field-label">PESEL</div>
+            </div>
+        </td>
+    </tr>
+</table>
+
+<table style="width: 100%; border-collapse: collapse; font-size: 10pt; font-family: DejaVu Sans, sans-serif; margin-top: 10px;">
+    <tr>
+        <td colspan="4" class="section-header">1. Dane pracodawcy:</td>
+    </tr>
+    <tr>
+        <td style="border-bottom: 1px dotted #000; padding-top: 12px; width: 70%;"></td>
+    </tr>
+    <tr style="font-size: 8pt;">
+        <td style="padding-left: 20px;">
+            <table style="width: 100%; border-collapse: collapse;">
+                <tr>
+                    <td style="width: 50%; text-align: left;">nazwa podmiotu obowiązanego
+                        adres lub imię i nazwisko pracodawcy
+                    </td>
+                </tr>
+            </table>
         </td>
     </tr>
 </table>
 
 <table>
-    <tr>
-        <td colspan="4" class="section-header">1. Dane pracodawcy:</td>
-    </tr>
-    <tr>
-        <td colspan="3" style="width: 70%;">
-            nazwa lub imię i nazwisko pracodawcy<br>
-            <div class="field-line-wide" style="width: 100%; margin-top: 5px;"></div>
-            <br><br>
-            adres siedziby pracodawcy<br>
-            <div class="field-line-wide" style="width: 100%; margin-top: 5px;"></div>
-        </td>
-        <td rowspan="3" style="width: 30%; height: 80px;">
-            <!-- Miejsce na pieczęć -->
-        </td>
-    </tr>
-    <tr>
-        <td style="width: 35%;">
-            NIP <sup>1)</sup><br>
-            <div class="number-boxes" style="margin-top: 5px;">
-                <span class="number-box"></span>
-                <span class="number-box"></span>
-                <span class="number-box"></span>
-                <span class="number-box"></span>
-                <span class="number-box"></span>
-                <span class="number-box"></span>
-                <span class="number-box"></span>
-                <span class="number-box"></span>
-                <span class="number-box"></span>
-                <span class="number-box"></span>
-            </div>
-        </td>
-        <td colspan="2" style="width: 35%;">
-            PESEL<br>
-            <div class="number-boxes" style="margin-top: 5px;">
-                <span class="number-box"></span>
-                <span class="number-box"></span>
-                <span class="number-box"></span>
-                <span class="number-box"></span>
-                <span class="number-box"></span>
-                <span class="number-box"></span>
-                <span class="number-box"></span>
-                <span class="number-box"></span>
-                <span class="number-box"></span>
-                <span class="number-box"></span>
-                <span class="number-box"></span>
-            </div>
-        </td>
-    </tr>
     <tr>
         <td colspan="3">
             numer dowodu osobistego lub inny dokument potwierdzający tożsamość pracodawcy<br>

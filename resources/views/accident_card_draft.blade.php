@@ -26,11 +26,27 @@
             margin-bottom: 30px;
             font-family: 'DejaVu Sans', sans-serif;
         }
+
+        .border-bottom {
+            border-bottom: 1px dotted #000;
+        }
+
+        .pt-12 {
+            padding-top: 12px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
     </style>
 </head>
 <body>
 
 <div class="corner-info">
+    <span style="border-bottom: 1px dotted #000; display: inline; width: 100%;">
+        {{ $maker_name_and_address }}
+    </span>
+    <br>
     Nazwa i adres podmiotu <br/>
     sporządzającego kartę wypadku
 </div>
@@ -45,24 +61,24 @@
     <tr style="margin-bottom: 10px">
         <td style="width: 3%; padding-top: 12px;">1.</td>
         <td style="width: 30%; padding-top: 12px;">Imię i nazwisko lub nazwa</td>
-        <td style="border-bottom: 1px dotted #000; padding-top: 12px;">John Doe</td>
+        <td class="border-bottom pt-12">{{ $payer_name }}</td>
     </tr>
     <tr>
-        <td style="padding-top: 12px;">2.</td>
-        <td style="padding-top: 12px;">Adres siedziby</td>
-        <td style="border-bottom: 1px dotted #000; padding-top: 12px;"></td>
+        <td class="pt-12">2.</td>
+        <td class="pt-12">Adres siedziby</td>
+        <td class="border-bottom pt-12">{{ $payer_residence_address }}</td>
     </tr>
     <tr>
-        <td style="padding-top: 12px;">3.</td>
+        <td class="pt-12">3.</td>
         <td colspan="2">
             <table style="width: 100%; border-collapse: collapse;">
                 <tr>
                     <td style="width: 5%; font-size: 10pt; padding-top: 12px;">NIP</td>
-                    <td style="border-bottom: 1px dotted #000;"></td>
+                    <td class="border-bottom pt-12 text-center">{{ $payer_nip }}</td>
                     <td style="width: 5%; font-size: 10pt; padding-top: 12px;">REGON</td>
-                    <td style="border-bottom: 1px dotted #000;"></td>
+                    <td class="border-bottom pt-12 text-center">{{ $payer_regon }}</td>
                     <td style="width: 5%; font-size: 10pt; padding-top: 12px;">PESEL</td>
-                    <td style="border-bottom: 1px dotted #000;"></td>
+                    <td class="border-bottom pt-12 text-center">{{ $payer_pesel }}</td>
                 </tr>
             </table>
         </td>
@@ -75,8 +91,10 @@
     <tr>
         <td colspan="3" style="padding-left: 19px;">
             <table style="width: 100%; border-collapse: collapse;">
-                <tr>
-                    <td style="border-bottom: 1px dotted #000; padding-top: 16px;" colspan="3"></td>
+                <tr style="border-bottom: 1px dotted #000;">
+                    <td style="width: 33%; text-align: left; padding-top: 12px;">{{ $p_doc }}</td>
+                    <td style="width: 33%; text-align: center; padding-top: 12px;">{{ $p_doc_s }}</td>
+                    <td style="width: 33%; text-align: right; padding-top: 12px;">{{ $p_doc_nr }}</td>
                 </tr>
                 <tr style="font-size: 8pt;">
                     <td style="width: 33%; text-align: left;">rodzaj dokumentu</td>
@@ -94,12 +112,16 @@
     <tr>
         <td style="width: 3%; padding-top: 12px;">1.</td>
         <td style="width: 50%; padding-top: 12px;">Imię i nazwisko poszkodowanego</td>
-        <td style="width: 100%; border-bottom: 1px dotted #000; padding-top: 12px;"></td>
+        <td style="width: 100%; border-bottom: 1px dotted #000; padding-top: 12px;">
+            {{ $injured_full_name }}
+        </td>
     </tr>
     <tr>
         <td style="width: 3%; padding-top: 12px;">2.</td>
         <td style="width: 15%; padding-top: 12px;">PESEL</td>
-        <td style="width: 100%; border-bottom: 1px dotted #000; padding-top: 12px;"></td>
+        <td style="width: 100%; border-bottom: 1px dotted #000; padding-top: 12px;">
+            {{ $injured_pesel }}
+        </td>
     </tr>
     <tr>
         <td colspan="3" style="padding-top: 12px; padding-left: 19px;">
@@ -109,8 +131,10 @@
     <tr>
         <td colspan="3" style="padding-left: 19px;">
             <table style="width: 100%; border-collapse: collapse;">
-                <tr>
-                    <td style="border-bottom: 1px dotted #000; padding-top: 12px;" colspan="3"></td>
+                <tr class="border-bottom pt-12">
+                    <td style="width: 33%; text-align: left; padding-top: 12px;">{{ $i_doc }}</td>
+                    <td style="width: 33%; text-align: center; padding-top: 12px;">{{ $i_doc_s }}</td>
+                    <td style="width: 33%; text-align: right; padding-top: 12px;">{{ $i_doc_n }}</td>
                 </tr>
                 <tr style="font-size: 8pt;">
                     <td style="width: 33%; text-align: left;">rodzaj dokumentu</td>
@@ -121,14 +145,14 @@
         </td>
     </tr>
     <tr>
-        <td style="padding-top: 12px;">3.</td>
-        <td style="padding-top: 12px;">Data i miejsce urodzenia</td>
-        <td style="border-bottom: 1px dotted #000; padding-top: 12px;"></td>
+        <td class="pt-12">3.</td>
+        <td class="pt-12">Data i miejsce urodzenia</td>
+        <td class="border-bottom pt-12">{{ $injured_birth_date_and_place }}</td>
     </tr>
     <tr>
-        <td style="padding-top: 12px;">4.</td>
-        <td style="padding-top: 12px;">Adres zamieszkania</td>
-        <td style="border-bottom: 1px dotted #000; padding-top: 12px;"></td>
+        <td class="pt-12">4.</td>
+        <td class="pt-12">Adres zamieszkania</td>
+        <td class="border-bottom pt-12">{{ $injured_address }}</td>
     </tr>
     <tr>
         <td style="padding-top: 12px; vertical-align: top;">5.</td>
@@ -136,7 +160,9 @@
     </tr>
     <tr>
         <td></td>
-        <td colspan="2" style="border-bottom: 1px dotted #000; height: 1em;"></td>
+        <td colspan="2" style="border-bottom: 1px dotted #000; height: 1em; padding-top: 12px;">
+            {{ $injured_insurance_information }}
+        </td>
     </tr>
 </table>
 
@@ -154,16 +180,20 @@
         1. Data zgłoszenia oraz imię i nazwisko osoby zgłaszającej wypadek
     </p>
     <p>
-        <span style="border-bottom: 1px dotted #000; display: block; width: 100%;"></span>
+        <span style="border-bottom: 1px dotted #000; display: block; width: 100%;">
+            {{ $accident_report_date_and_full_name }}
+        </span>
     </p>
 
     <p style="margin-top: 25px;">
         2. Informacje dotyczące okoliczności, przyczyn, czasu i miejsca wypadku, rodzaju
         i umiejscowienia urazu
     </p>
-    <p><span style="border-bottom: 1px dotted #000; display: block; width: 100%; height: 1em;"></span></p>
-    <p><span style="border-bottom: 1px dotted #000; display: block; width: 100%; height: 1em;"></span></p>
-    <p><span style="border-bottom: 1px dotted #000; display: block; width: 100%; height: 1em;"></span></p>
+    <p>
+        <span style="border-bottom: 1px dotted #000; display: block; width: 100%;">
+            {{ $accident_details }}
+        </span>
+    </p>
 
     <p style="margin-top: 25px;">
         3. Świadkowie wypadku:
@@ -171,7 +201,9 @@
     <table style="width: 100%; border-collapse: collapse; font-size: 10pt; font-family: DejaVu Sans, sans-serif; margin-top: 10px;">
         <tr>
             <td style="width: 3%; padding-top: 12px; vertical-align: top;">1)</td>
-            <td style="border-bottom: 1px dotted #000; padding-top: 12px; padding-bottom: 8px; width: 97%;"></td>
+            <td style="border-bottom: 1px dotted #000; padding-top: 12px; width: 97%;">
+                {{ $witness_1 }}
+            </td>
         </tr>
         <tr style="font-size: 8pt;">
             <td></td>
@@ -180,7 +212,9 @@
 
         <tr>
             <td style="width: 3%; padding-top: 12px; vertical-align: top;">2)</td>
-            <td style="border-bottom: 1px dotted #000; padding-top: 12px; padding-bottom: 8px; width: 97%;"></td>
+            <td style="border-bottom: 1px dotted #000; padding-top: 12px; width: 97%;">
+                {{ $witness_2 }}
+            </td>
         </tr>
         <tr style="font-size: 8pt;">
             <td></td>
@@ -198,19 +232,29 @@
     <p style="margin-top: 25px;">
         4. Wypadek jest / nie jest<sup>2</sup> wypadkiem przy pracy określonym w art. 3 ust. 3 pkt ..... <sup>3</sup> / albo art. 3a<sup>4</sup> ustawy z dnia 30 października 2002 r. o ubezpieczeniu społecznym z tytułu wypadków przy pracy i chorób zawodowych (uzasadnić i wskazać dowody, jeżeli zdarzenia nie uznano za wypadek przy pracy)
     </p>
-    <p><span style="border-bottom: 1px dotted #000; display: block; width: 100%;"></span></p>
+    <p>
+        <span style="border-bottom: 1px dotted #000; display: block; width: 100%;">
+            {{ $not_work_accident_argumentation }}
+        </span>
+    </p>
 
     <p style="margin-top: 25px;">
         5. Stwierdzono, że wyłączną przyczyną wypadku było udowodnione naruszenie przez poszkodowanego przepisów dotyczących ochrony życia i zdrowia, spowodowane przez niego umyślnie lub wskutek rażącego niedbalstwa (wskazać dowody)
     </p>
-    <p><span style="border-bottom: 1px dotted #000; display: block; width: 100%;"></span></p>
-    <p><span style="border-bottom: 1px dotted #000; display: block; width: 100%;"></span></p>
+    <p>
+        <span style="border-bottom: 1px dotted #000; display: block; width: 100%;">
+            {{ $bhp_rules_breached_argumentation }}
+        </span>
+    </p>
 
     <p style="margin-top: 25px;">
        6. Stwierdzono, że poszkodowany, będąc w stanie nietrzeźwości lub pod wpływem środków odurzających lub substancji psychotropowych, przyczynił się w znacznym stopniu do spowodowania wypadku (wskazać dowody, a w przypadku odmowy przez poszkodowanego poddania się badaniu na zawartość tych substancji w organizmie – zamieścić informację o tym fakcie)
     </p>
-    <p><span style="border-bottom: 1px dotted #000; display: block; width: 100%;"></span></p>
-    <p><span style="border-bottom: 1px dotted #000; display: block; width: 100%;"></span></p>
+    <p>
+        <span style="border-bottom: 1px dotted #000; display: block; width: 100%;">
+            {{ $injured_was_intoxicated_argumentation }}
+        </span>
+    </p>
 
     <div style="font-size: 10pt; font-family: DejaVu Sans, sans-serif; margin-top: 20px; line-height: 1.3; padding-top: 15px;">
         <div style="width: 30%; height: 2px; background-color: grey;"></div>
@@ -240,8 +284,10 @@
         <tr>
             <td colspan="3">
                 <table style="width: 100%; border-collapse: collapse;">
-                    <tr>
-                        <td style="border-bottom: 1px dotted #000; padding-top: 16px;" colspan="3"></td>
+                    <tr style="border-bottom: 1px dotted #000;">
+                        <td style="width: 33%; text-align: left; padding-top: 12px;">{{ $other_full_name }}</td>
+                        <td style="width: 33%; text-align: center; padding-top: 12px;">{{ $other_acc_date }}</td>
+                        <td style="width: 33%; text-align: right; padding-top: 12px;"></td>
                     </tr>
                     <tr style="font-size: 8pt;">
                         <td style="width: 33%; text-align: left;">imię i nazwisko poszkodowanego (członka rodziny)</td>
@@ -256,13 +302,17 @@
     <table style="width: 100%; border-collapse: collapse; font-size: 10pt; font-family: DejaVu Sans, sans-serif; margin-top: 10px;">
         <tr style="margin-bottom: 10px">
             <td style="width: 3%; padding-top: 12px;">2.</td>
-            <td style="width: 30%; padding-top: 12px;">Kartę wypadku sporządzono w dniu</td>
+            <td style="width: 40%; padding-top: 12px;">Kartę wypadku sporządzono w dniu</td>
             <td style="border-bottom: 1px dotted #000; padding-top: 12px;"></td>
         </tr>
+    </table>
 
+    <table style="width: 100%; border-collapse: collapse; font-size: 10pt; font-family: DejaVu Sans, sans-serif; margin-top: 10px;">
         <tr>
             <td style="width: 3%; padding-top: 12px; vertical-align: top;">1)</td>
-            <td style="border-bottom: 1px dotted #000; padding-top: 12px; padding-bottom: 8px; width: 97%;"></td>
+            <td style="border-bottom: 1px dotted #000; padding-top: 12px; width: 97%;">
+                {{ $entity_responsible }}
+            </td>
         </tr>
         <tr style="font-size: 8pt;">
             <td></td>
@@ -279,14 +329,16 @@
 
         <tr>
             <td style="width: 3%; padding-top: 12px; vertical-align: top;">2)</td>
-            <td style="border-bottom: 1px dotted #000; padding-top: 12px; padding-bottom: 8px; width: 97%;"></td>
+            <td style="border-bottom: 1px dotted #000; padding-top: 12px; width: 97%;">
+
+            </td>
         </tr>
         <tr style="font-size: 8pt;">
             <td></td>
             <td style="padding-left: 20px;">
                 <table style="width: 100%; border-collapse: collapse;">
                     <tr>
-                        <td style="width: 50%; text-align: left;">imię i nazwisko sporządzającego podpis kartę wypadku</td>
+                        <td style="width: 50%; text-align: left;">imię i nazwisko sporządzającego kartę wypadku</td>
                         <td style="width: 50%; text-align: right;">podpis</td>
                     </tr>
                 </table>
@@ -298,7 +350,9 @@
         3. Przeszkody i trudności uniemożliwiające sporządzenie karty wypadku w wymaganym terminie 14 dni
     </p>
     <p>
-        <span style="border-bottom: 1px dotted #000; display: block; width: 100%;"></span>
+        <span style="border-bottom: 1px dotted #000; display: block; width: 100%;">
+            {{ $preparation_not_in_time }}
+        </span>
     </p>
 
     <table style="width: 100%; border-collapse: collapse; font-size: 10pt; font-family: DejaVu Sans, sans-serif; margin-top: 10px;">
@@ -318,7 +372,11 @@
         5. Załączniki:
     </p>
     <p>
-        <span style="border-bottom: 1px dotted #000; display: block; width: 100%;"></span>
+        <span style="border-bottom: 1px dotted #000; display: block; width: 100%;">
+            @foreach($attachments as $attachment)
+                {{ $attachment }} <br>
+            @endforeach
+        </span>
     </p>
 </div>
 
