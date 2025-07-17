@@ -546,55 +546,79 @@
     </tr>
 </table>
 
-<table>
-    <tr>
-        <td colspan="4" class="section-header"><strong>6.</strong> Skutki wypadku dla poszkodowanego <span class="italic">(rodzaj i umiejscowienie urazu)</span></td>
-    </tr>
-    <tr>
-        <td colspan="4">
-            <div class="text-area" style="height: 120px;"></div>
-        </td>
-    </tr>
-</table>
+<p style="margin-top: 25px;">
+    6. Skutki wypadku dla poszkodowanego <span class="italic">(rodzaj i umiejscowienie urazu)</span>
+</p>
+<p>
+    <span style="border-bottom: 1px dotted #000; display: block; width: 100%;">
+        Lorem ipsum, lorem ipsum, Lorem ipsum, lorem ipsum, Lorem ipsum, lorem ipsum, Lorem ipsum, lorem ipsum,
+        Lorem ipsum, lorem ipsum, Lorem ipsum, lorem ipsum, Lorem ipsum, lorem ipsum, Lorem ipsum, lorem ipsum,
+        Lorem ipsum, lorem ipsum, Lorem ipsum, lorem ipsum, Lorem ipsum, lorem ipsum, Lorem ipsum, lorem ipsum,
+        Lorem ipsum, lorem ipsum, Lorem ipsum, lorem ipsum, Lorem ipsum, lorem ipsum, Lorem ipsum, lorem ipsum
+    </span>
+</p>
 
-<table>
+<table style="margin-top: 25px;">
     <tr>
-        <td style="width: 50%;"><strong>7.</strong> Stwierdza się, że wypadek:</td>
-        <td style="width: 15%;" class="center"><strong>JEST</strong> <sup>6)</sup></td>
-        <td style="width: 15%;" class="center"><strong><span class="strike">NIE JEST</span></strong> <sup>6)</sup></td>
-        <td style="width: 20%;"></td>
+        <td style="width: 50%;">7. Stwierdza się, że wypadek:</td>
+        <td style="width: 15%; border: 1px solid black; background-color: #ffffcc;" class="center">
+            JEST <sup>6)</sup>
+        </td>
+        <td style="width: 10%;"></td>
+        <td style="width: 15%; border: 1px solid black; background-color: #ffffcc;" class="center">
+            <span class="strike">NIE JEST </span><sup>6)</sup>
+        </td>
+        <td style="width: 10%;"></td>
     </tr>
     <tr>
         <td colspan="4">
-            <div class="checkbox"></div> wypadkiem przy pracy <sup>6)</sup><br>
-            <div class="checkbox"></div> <span class="strike">traktowany na równi z wypadkiem przy pracy</span> <sup>6)</sup><br><br>
+            <span class="ml-10">
+                - wypadkiem przy pracy <sup>6)</sup>
+            </span>
+            <br>
+            <span class="ml-10">
+                - <span class="strike">traktowany na równi z wypadkiem przy pracy</span> <sup>6)</sup>
+            </span>
+            <br>
             co uzasadnia się następująco: <sup>4)</sup><br>
-            <div class="text-area" style="height: 150px;"></div>
         </td>
     </tr>
 </table>
 
-<table>
+<p>
+    <span style="border-bottom: 1px dotted #000; display: block; width: 100%;">
+        Lorem ipsum, lorem ipsum, Lorem ipsum, lorem ipsum, Lorem ipsum, lorem ipsum, Lorem ipsum, lorem ipsum,
+        Lorem ipsum, lorem ipsum, Lorem ipsum, lorem ipsum, Lorem ipsum, lorem ipsum, Lorem ipsum, lorem ipsum,
+        Lorem ipsum, lorem ipsum, Lorem ipsum, lorem ipsum, Lorem ipsum, lorem ipsum, Lorem ipsum, lorem ipsum,
+        Lorem ipsum, lorem ipsum, Lorem ipsum, lorem ipsum, Lorem ipsum, lorem ipsum, Lorem ipsum, lorem ipsum
+    </span>
+</p>
+
+<table style="width: 100%; background-color: transparent; margin-top: 15px;">
     <tr>
-        <td colspan="4"><strong>8.</strong> Rodzaj wypadku: <sup>6)</sup></td>
-    </tr>
-    <tr>
-        <td style="width: 25%;">
-            <div class="checkbox"></div> indywidualny
-        </td>
-        <td style="width: 25%;">
-            <div class="checkbox"></div> <span class="strike">zbiorowy</span>
-        </td>
-        <td style="width: 25%;">
-            <div class="checkbox"></div> <span class="strike">śmiertelny</span>
-        </td>
-        <td style="width: 25%;">
-            <div class="checkbox"></div> <span class="strike">ciężki</span>
+        <td colspan="6" style="padding-bottom: 5px;">
+            <strong>8.</strong> Rodzaj wypadku: <sup>6)</sup>
         </td>
     </tr>
     <tr>
-        <td colspan="4">
-            <div class="checkbox"></div> powodujący czasową niezdolność do pracy
+        <td style="border: 1px solid #000; padding: 2px 6px; width: 15%">
+            indywidualny
+        </td>
+        <td style="width: 2%"></td>
+        <td style="border: 1px solid #000; padding: 2px 6px; width: 13%">
+            <span style="text-decoration: line-through;">zbiorowy</span>
+        </td>
+        <td style="width: 2%"></td>
+        <td style="border: 1px solid #000; padding: 2px 6px; width: 13%">
+            <span style="text-decoration: line-through;">śmiertelny</span>
+        </td>
+        <td style="width: 2%"></td>
+        <td style="border: 1px solid #000; padding: 2px 6px; width: 12%">
+            <span style="text-decoration: line-through;">ciężki</span>
+        </td>
+        <td style="width: 2%"></td>
+        <td colspan="3" style="border: 1px solid #000; padding: 2px 6px; width: 39%">
+            powodujący czasową niezdolność do pracy
         </td>
     </tr>
 </table>
