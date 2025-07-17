@@ -26,20 +26,8 @@
             text-align: left;
         }
 
-        .no-border {
-            border: none;
-        }
-
         .center {
             text-align: center;
-        }
-
-        .bold {
-            font-weight: bold;
-        }
-
-        .underline {
-            text-decoration: underline;
         }
 
         .small {
@@ -59,14 +47,14 @@
         }
 
         .field-line {
-            border-bottom: 1px solid #000000;
+            border-bottom: 1px dotted #000000;
             min-height: 15px;
             display: inline-block;
             width: 150px;
         }
 
         .field-line-wide {
-            border-bottom: 1px solid #000000;
+            border-bottom: 1px dotted #000000;
             min-height: 15px;
             display: inline-block;
             width: 250px;
@@ -89,7 +77,7 @@
 
         .signature-area {
             height: 40px;
-            border-bottom: 1px solid #000000;
+            border-bottom: 1px dotted #000000;
         }
 
         .strike {
@@ -102,10 +90,6 @@
 
         sup {
             font-size: 7px;
-        }
-
-        .page-break {
-            page-break-before: always;
         }
 
         .protocol-header {
@@ -137,6 +121,10 @@
             margin: 0;
         }
 
+        .green-box {
+            background-color: #ccffcc;
+        }
+
         .number-box + .number-box {
             margin-left: -1px;
         }
@@ -157,6 +145,50 @@
 
         .field-label {
             font-size: 10pt;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .d-block {
+            display: block;
+        }
+
+        .pt-10 {
+            padding-top: 10px;
+        }
+
+        .pr-25 {
+            padding-right: 25px;
+        }
+
+        .pr-10 {
+            padding-right: 10px;
+        }
+
+        .pr-5 {
+            padding-right: 5px;
+        }
+
+        .pb-10 {
+            padding-bottom: 10px;
+        }
+
+        .mr-10 {
+            margin-right: 10px;
+        }
+
+        .mr-5 {
+            margin-right: 5px;
+        }
+
+        .ml-10 {
+            margin-left: 10px;
+        }
+
+        .ml-5 {
+            margin-left: 5px;
         }
     </style>
 </head>
@@ -188,11 +220,11 @@
         <td style="border-bottom: 1px dotted #000; padding-top: 12px; width: 70%;"></td>
     </tr>
     <tr style="font-size: 8pt;">
-        <td style="padding-left: 20px;">
+        <td>
             <table style="width: 100%; border-collapse: collapse;">
                 <tr>
-                    <td style="width: 50%; text-align: left;">nazwa podmiotu obowiązanego
-                        adres lub imię i nazwisko pracodawcy
+                    <td style="width: 50%; text-align: left;">
+                        nazwa lub imię i nazwisko pracodawcy
                     </td>
                 </tr>
             </table>
@@ -202,7 +234,7 @@
         <td style="border-bottom: 1px dotted #000; padding-top: 12px; width: 70%;"></td>
     </tr>
     <tr style="font-size: 8pt;">
-        <td style="padding-left: 20px;">
+        <td>
             <table style="width: 100%; border-collapse: collapse;">
                 <tr>
                     <td style="width: 50%; text-align: left;">
@@ -258,17 +290,14 @@
 
 <table style="width: 100%; border-collapse: collapse; font-size: 10pt; font-family: DejaVu Sans, sans-serif; margin-top: 10px;">
     <tr>
-        <td colspan="4" class="section-header">1. Dane pracodawcy:</td>
-    </tr>
-    <tr>
         <td style="border-bottom: 1px dotted #000; padding-top: 12px; width: 70%;"></td>
     </tr>
     <tr style="font-size: 8pt;">
-        <td style="padding-left: 20px;">
+        <td>
             <table style="width: 100%; border-collapse: collapse;">
                 <tr>
-                    <td style="width: 50%; text-align: left;">nazwa podmiotu obowiązanego
-                        adres lub imię i nazwisko pracodawcy
+                    <td style="width: 50%; text-align: left;">
+                        numer dowodu osobistego lub inny dokument potwierdzający tożsamość pracodawcy
                     </td>
                 </tr>
             </table>
@@ -276,109 +305,158 @@
     </tr>
 </table>
 
-<table>
-    <tr>
-        <td colspan="3">
-            numer dowodu osobistego lub inny dokument potwierdzający tożsamość pracodawcy<br>
-            <div class="field-line-wide" style="width: 100%; margin-top: 5px;"></div>
-        </td>
-    </tr>
-    <tr>
-        <td colspan="4">
-            Kod PKD<br>
-            <div class="number-boxes" style="margin-top: 5px;">
-                <span class="number-box"></span>
-                <span class="number-box"></span>
-                <span class="number-box"></span>
-                <span class="number-box"></span>
-                <span class="number-box"></span>
-            </div>
-        </td>
-    </tr>
-</table>
+<div class="field-container">
+    <span class="no-gap-boxes">
+        <span class="number-box"></span>
+        <span class="number-box"></span>
+        <span class="number-box"></span>
+        <span class="number-box"></span>
+        <span class="number-box"></span>
+    </span>
+    <div class="field-label">
+        Kod PKD
+    </div>
+</div>
 
-<table>
+<table style="margin-top: 10px;">
     <tr>
         <td colspan="4" class="section-header">2. Zespół powypadkowy w składzie:</td>
     </tr>
     <tr>
         <td style="width: 3%;">1)</td>
-        <td style="width: 47%;">
+        <td style="width: 48.5%;" class="pr-25">
             <div class="field-line-wide" style="width: 100%;"></div><br>
-            <span class="small">imię i nazwisko</span>
+            <span class="small text-center d-block">imię i nazwisko</span>
         </td>
-        <td style="width: 47%;">
+        <td style="width: 48.5%;">
             <div class="field-line-wide" style="width: 100%;"></div><br>
-            <span class="small">funkcja</span>
+            <span class="small text-center d-block">funkcja</span>
         </td>
-        <td rowspan="2" style="width: 3%;"></td>
     </tr>
     <tr>
         <td>2)</td>
-        <td>
+        <td class="pr-25">
             <div class="field-line-wide" style="width: 100%;"></div><br>
-            <span class="small">imię i nazwisko</span>
+            <span class="small text-center d-block">imię i nazwisko</span>
         </td>
         <td>
             <div class="field-line-wide" style="width: 100%;"></div><br>
-            <span class="small">funkcja</span>
+            <span class="small text-center d-block">funkcja</span>
         </td>
     </tr>
 </table>
 
 <table>
     <tr>
-        <td colspan="4">
-            dokonał w dniach od <span class="field-line"></span> do <span class="field-line"></span> ustaleń dotyczących okoliczności i przyczyn<br>
-            wypadku przy pracy, jakiemu w dniu <span class="field-line"></span> o godz. <span class="field-line"></span> uległ(a)
+        <td class="pb-10" colspan="6">
+            dokonał w dniach od
+            <span class="field-line ml-5 mr-10"></span>
+            do
+            <span class="field-line ml-10 mr-5"></span>
+            ustaleń dotyczących okoliczności i przyczyn<br>
         </td>
     </tr>
     <tr>
-        <td colspan="4">
-            Pan(i) <span class="field-line-wide"></span> urodzony(a) <span class="field-line-wide"></span><br>
-            <span style="margin-left: 350px;">dnia</span>
+        <td class="pb-10" colspan="6">
+            wypadku przy pracy, jakiemu w dniu
+            <span class="field-line ml-10 mr-10" style="width: 180px"></span>
+            o godz.
+            <span class="field-line ml-10 mr-10" style="width: 180px"></span>
+            uległ(a)
         </td>
     </tr>
     <tr>
-        <td colspan="4">
-            zamieszkały(a) <span class="field-line" style="width: 100px;"></span> <span class="field-line" style="width: 150px;"></span> <span class="field-line" style="width: 200px;"></span> <span class="field-line" style="width: 50px;"></span> <span class="field-line" style="width: 50px;"></span><br>
-            <span style="margin-left: 60px; font-size: 8px;">kod pocztowy</span>
-            <span style="margin-left: 100px; font-size: 8px;">miejscowość</span>
-            <span style="margin-left: 150px; font-size: 8px;">ulica</span>
-            <span style="margin-left: 30px; font-size: 8px;">nr domu</span>
-            <span style="margin-left: 15px; font-size: 8px;">nr lokalu</span>
+        <td colspan="6">
+            Pan(i)
+            <span class="field-line-wide ml-10 mr-10" style="width: 268px"></span>
+            urodzony(a)
+            <span class="field-line-wide ml-10 mr-10" style="width: 268px"></span><br>
+            <span style="margin-left: 520px;">dnia</span>
         </td>
     </tr>
     <tr>
-        <td style="width: 25%;">
-            PESEL<br>
-            <div class="number-boxes" style="margin-top: 5px;">
-                <span class="number-box"></span>
-                <span class="number-box"></span>
-                <span class="number-box"></span>
-                <span class="number-box"></span>
-                <span class="number-box"></span>
-                <span class="number-box"></span>
-                <span class="number-box"></span>
-                <span class="number-box"></span>
-                <span class="number-box"></span>
-                <span class="number-box"></span>
-                <span class="number-box"></span>
+        <td style="width: 5%;">zamieszkały(a)</td>
+        <td style="width: 15%;" class="pr-10">
+            <div class="field-line-wide" style="width: 100%;"></div><br>
+            <span class="small text-center d-block">kod pocztowy</span>
+        </td>
+        <td style="width: 19%;" class="pr-10">
+            <div class="field-line-wide" style="width: 100%;"></div><br>
+            <span class="small text-center d-block">miejscowość</span>
+        </td>
+        <td style="width: 24%;" class="pr-10">
+            <div class="field-line-wide" style="width: 100%;"></div><br>
+            <span class="small text-center d-block">ulica</span>
+        </td>
+        <td style="width: 10%;" class="pr-10">
+            <div class="field-line-wide" style="width: 100%;"></div><br>
+            <span class="small text-center d-block">numer domu</span>
+        </td>
+        <td style="width: 16%;" class="pr-10">
+            <div class="field-line-wide" style="width: 100%;"></div><br>
+            <span class="small text-center d-block">numer lokum</span>
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td style="width: 50%;" class="pt-10">
+            <div class="field-container">
+                <span class="no-gap-boxes">
+                    <span class="number-box green-box"></span>
+                    <span class="number-box green-box"></span>
+                    <span class="number-box green-box"></span>
+                    <span class="number-box green-box"></span>
+                    <span class="number-box green-box"></span>
+                    <span class="number-box green-box"></span>
+                    <span class="number-box green-box"></span>
+                    <span class="number-box green-box"></span>
+                    <span class="number-box green-box"></span>
+                    <span class="number-box green-box"></span>
+                    <span class="number-box green-box"></span>
+                </span>
+                <div class="field-label">
+                    PESEL
+                </div>
             </div>
         </td>
-        <td colspan="2" style="width: 50%;"></td>
-        <td style="width: 25%;">
-            numer dowodu osobistego lub innego dokumentu<br>
-            potwierdzającego tożsamość<br>
-            <div class="field-line-wide" style="width: 100%; margin-top: 5px;"></div>
+        <td colspan="1" style="width: 15%;"></td>
+        <td style="width: 40%;">
+            <div class="field-line-wide" style="width: 100%;"></div><br>
+            <span class="small text-center d-block">
+                numer dowodu osobistego lub innego dokumentu<br>
+                potwierdzającego tożsamość<br>
+            </span>
         </td>
     </tr>
+</table>
+
+<table>
     <tr>
-        <td colspan="4">
-            zatrudniony(a) w <span class="field-line-wide"></span> na stanowisku <span class="field-line"></span> <span class="field-line" style="width: 100px;"></span><br>
-            <span style="margin-left: 100px; font-size: 8px;">komórka organizacyjna</span>
-            <span style="margin-left: 200px; font-size: 8px;">nazwa stanowiska</span>
-            <span style="margin-left: 50px; font-size: 8px;">kod zawodu <sup>3)</sup></span>
+        <td style="width: 14%;"> zatrudniony(a) w</td>
+        <td style="width: 33%;" class="pr-10">
+            <div class="field-line-wide" style="width: 100%;"></div><br>
+            <span class="small text-center d-block">komórka organizacyjna</span>
+        </td>
+        <td style="width: 13%;">na stanowisku</td>
+        <td style="width: 25%;" class="pr-5">
+            <div class="field-line-wide" style="width: 100%;"></div><br>
+            <span class="small text-center d-block">nazwa stanowiska</span>
+        </td>
+        <td style="width: 15%;" class="pr-5">
+            <div class="field-container">
+                <span class="no-gap-boxes">
+                    <span class="number-box green-box"></span>
+                    <span class="number-box green-box"></span>
+                    <span class="number-box green-box"></span>
+                    <span class="number-box green-box"></span>
+                    <span class="number-box green-box"></span>
+                </span>
+                <div class="field-label">
+                    kod zawodu <sup>3)</sup>
+                </div>
+            </div>
         </td>
     </tr>
 </table>
@@ -391,57 +469,82 @@
     </tr>
 </table>
 
-<table>
+<table style="width: 100%; border-collapse: collapse; border: 1px solid black; background-color: #ffffcc;">
     <tr>
-        <td style="width: 3%;"><strong>4.</strong></td>
-        <td colspan="3"><strong>Ustalono następujące okoliczności wypadku:</strong> <sup>4)</sup></td>
+        <td style="width: 3%; vertical-align: top;">4.</td>
+        <td colspan="3" style="padding-bottom: 4px; border-bottom: 1px dotted #000;">
+            Ustalono następujące okoliczności wypadku: <sup>4)</sup>
+        </td>
     </tr>
     <tr>
         <td></td>
         <td colspan="3">
-            <div class="text-area"></div>
+            <table style="width: 100%; border-collapse: collapse;">
+                <tr><td style="border-bottom: 1px dotted #000;">&nbsp;</td></tr>
+                <tr><td style="border-bottom: 1px dotted #000;">&nbsp;</td></tr>
+                <tr><td style="border-bottom: 1px dotted #000;">&nbsp;</td></tr>
+                <tr><td style="border-bottom: 1px dotted #000;">&nbsp;</td></tr>
+                <tr><td style="border-bottom: 1px dotted #000;">&nbsp;</td></tr>
+            </table>
+        </td>
+    </tr>
+    <tr style="border-top: 1px solid #000;">
+        <td style="width: 3%; vertical-align: top;">5.</td>
+        <td colspan="3" style="padding-bottom: 4px; border-bottom: 1px dotted #000;">
+            Ustalono następujące przyczyny wypadku: <sup>4)</sup>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td colspan="3">
+            <table style="width: 100%; border-collapse: collapse;">
+                <tr><td style="border-bottom: 1px dotted #000;">&nbsp;</td></tr>
+                <tr><td style="border-bottom: 1px dotted #000;">&nbsp;</td></tr>
+                <tr><td style="border-bottom: 1px dotted #000;">&nbsp;</td></tr>
+                <tr><td style="border-bottom: 1px dotted #000;">&nbsp;</td></tr>
+                <tr><td style="border-bottom: 1px dotted #000;">&nbsp;</td></tr>
+                <tr>
+                    <td style="border-bottom: 1px dotted #000;">
+                        stwierdzono nieprzestrzeganie przez pracodawcę następujących przepisów prawa pracy,
+                        w szczególności przepisów i zasad bezpieczeństwa i higieny pracy lub innych przepisów
+                        dotyczących ochrony życia i zdrowia <span class="italic">(wskazać dowody)</span>: <sup>4)</sup>,<sup>5)</sup>
+                    </td>
+                </tr>
+                <tr><td style="border-bottom: 1px dotted #000;">&nbsp;</td></tr>
+                <tr><td style="border-bottom: 1px dotted #000;">Nie stwierdzono</td></tr>
+                <tr><td style="border-bottom: 1px dotted #000;">&nbsp;</td></tr>
+                <tr><td style="border-bottom: 1px dotted #000;">&nbsp;</td></tr>
+                <tr><td style="border-bottom: 1px dotted #000;">&nbsp;</td></tr>
+                <tr>
+                    <td style="border-bottom: 1px dotted #000;">
+                        stwierdzono, że wyłączną przyczyną wypadku było naruszenie przez poszkodowanego pracownika
+                        przepisów dotyczących ochrony życia i zdrowia, spowodowane przez niego umyślnie lub w skutek
+                        rażącego niedbalstwa <span class="italic">(wskazać dowody)</span>: <sup>4)</sup>, <sup>5)</sup>
+                    </td>
+                </tr>
+                <tr><td style="border-bottom: 1px dotted #000;">&nbsp;</td></tr>
+                <tr><td style="border-bottom: 1px dotted #000;">Nie stwierdzono</td></tr>
+                <tr><td style="border-bottom: 1px dotted #000;">&nbsp;</td></tr>
+                <tr><td style="border-bottom: 1px dotted #000;">&nbsp;</td></tr>
+                <tr><td style="border-bottom: 1px dotted #000;">&nbsp;</td></tr>
+                <tr>
+                    <td style="border-bottom: 1px dotted #000;">
+                        stwierdzono stan nietrzeźwości albo użycie przez poszkodowanego pracownika środków odurzających
+                        lub substancji psychotropowych przyczyniające się w znacznym stopniu do powstania wypadku przy
+                        pracy <span class="italic">(wskazać dowody, a w przypadku odmowy przez poszkodowanego poddania
+                            się badaniom na zawartość tych substancji w organizmie – zamieścić informację o tym fakcie)
+                        </span>: <sup>4)</sup><br>
+                    </td>
+                </tr>
+                <tr><td style="border-bottom: 1px dotted #000;">&nbsp;</td></tr>
+                <tr><td style="border-bottom: 1px dotted #000;">Nie badano</td></tr>
+                <tr><td style="border-bottom: 1px dotted #000;">&nbsp;</td></tr>
+                <tr><td style="border-bottom: 1px dotted #000;">&nbsp;</td></tr>
+                <tr><td style="border-bottom: 1px dotted #000;">&nbsp;</td></tr>
+            </table>
         </td>
     </tr>
 </table>
-
-<table>
-    <tr>
-        <td style="width: 3%;"><strong>5.</strong></td>
-        <td colspan="3"><strong>Ustalono następujące przyczyny wypadku:</strong> <sup>4)</sup></td>
-    </tr>
-    <tr>
-        <td><strong>-</strong></td>
-        <td colspan="3">
-            <div class="text-area"></div>
-        </td>
-    </tr>
-    <tr>
-        <td><strong>-</strong></td>
-        <td colspan="3">
-            stwierdzono nieprzestrzeganie przez pracodawcę następujących przepisów prawa pracy, w szczególności przepisów i zasad bezpieczeństwa i higieny pracy lub innych przepisów dotyczących ochrony życia i zdrowia <span class="italic">(wskazać dowody)</span>: <sup>4), 5)</sup><br>
-            <div class="text-area"></div>
-            <div class="checkbox"></div> Nie stwierdzono
-        </td>
-    </tr>
-    <tr>
-        <td><strong>-</strong></td>
-        <td colspan="3">
-            stwierdzono, że wyłączną przyczyną wypadku było naruszenie przez poszkodowanego pracownika przepisów dotyczących ochrony życia i zdrowia, spowodowane przez niego umyślnie lub w skutek rażącego niedbalstwa <span class="italic">(wskazać dowody)</span>: <sup>4)</sup><br>
-            <div class="text-area"></div>
-            <div class="checkbox"></div> Nie stwierdzono
-        </td>
-    </tr>
-    <tr>
-        <td><strong>-</strong></td>
-        <td colspan="3">
-            stwierdzono stan nietrzeźwości albo użycie przez poszkodowanego pracownika środków odurzających lub substancji psychotropowych przyczyniające się w znacznym stopniu do powstania wypadku przy pracy <span class="italic">(wskazać dowody, a w przypadku odmowy przez poszkodowanego poddania się badaniom na zawartość tych substancji w organizmie – zamieścić informację o tym fakcie)</span>: <sup>4)</sup><br>
-            <div class="text-area"></div>
-            <div class="checkbox"></div> Nie badano
-        </td>
-    </tr>
-</table>
-
-<div class="page-break"></div>
 
 <table>
     <tr>
