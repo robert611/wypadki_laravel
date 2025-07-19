@@ -62,6 +62,30 @@ class PdfController extends Controller
         return $pdf->download('after_accident_protocol.pdf');
     }
 
+    public function generateAccidentsRegisterPdf(): Response
+    {
+        $data = [
+            'register_date' => '01.01.2021',
+            'company_name' => 'Firma BhpSoft',
+            'accidents' => [
+                [
+                    'full_name' => 'Jan Kowalski',
+                    'date_and_place' => '25.01.2022 Gniezno',
+                    'effect' => 'Pęknięcie żebra',
+                    'protocol_date' => '29.08.2022',
+                    'is_work_accident' => 'Tak',
+                    'zus_date' => '---',
+                    'incapable_for_work' => '74 dni',
+                    'other_information' => 'Pozostałe informacje',
+                ],
+            ],
+        ];
+
+        $pdf = Pdf::loadView('accidents_register', $data);
+
+        return $pdf->download('accidents_register.pdf');
+    }
+
     public function displayAccidentCard(): View
     {
         $data = [
@@ -78,5 +102,14 @@ class PdfController extends Controller
         ];
 
         return view('after_accident_protocol', $data);
+    }
+
+    public function displayAccidentsRegister(): View
+    {
+        $data = [
+
+        ];
+
+        return view('accidents_register', $data);
     }
 }
