@@ -119,7 +119,6 @@
             margin-bottom: 8px;
         }
 
-
         .statement-lines {
             margin-bottom: 10px;
         }
